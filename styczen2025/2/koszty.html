@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montaż paneli podłogowych</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="montaz_paneli.png" alt="firma usługowa">
+    </header>
+
+    <nav>
+        <a href="index.html">Strona Główna</a>
+        <a href="oferta.html">Oferta</a>
+        <a href="koszty.html">Kalkulator kosztów</a>
+    </nav>
+
+    <main>
+        <h1>Kalkulator kosztów montażu</h1>
+
+        <label for="szerokosc">Szerokość pomieszczenia [m]: </label>
+        <input type="text" name="szerokosc" id="szerokosc">
+
+        <label for="dlugosc">Długość pomieszczenia [m]: </label>
+        <input type="text" name="dlugosc" id="dlugosc">
+
+        <p>Typ panelu</p>
+        <input type="radio" name="typ" id="laminowany">
+        <label for="laminowany">Panele laminowane</label>
+
+        <input type="radio" name="typ" id="winylowy">
+        <label for="winylowy">Panele winylowe</label>
+
+        <input type="radio" name="typ" id="podlogowa">
+        <label for="podlogowa">Deska podłogowa</label>
+
+        <input type="submit" value="Oblicz" id="oblicz">
+
+        <p id="wyniki"></p>
+
+    </main>
+
+    <footer>
+        <h5>Autor strony: 12345678910</h5>
+    </footer>
+
+
+    <script src="skrypt.js"></script>
+
+</body>
+
+</html>
