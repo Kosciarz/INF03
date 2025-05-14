@@ -1,0 +1,16 @@
+SELECT osoby.imie, osoby.nazwisko
+FROM osoby
+WHERE osoby.imie LIKE "A%"
+
+SELECT zadania.zadanie, zadania.data
+FROM zadania
+WHERE zadania.zadanie LIKE "%mebli%"
+ORDER BY zadania.data
+
+SELECT osoby.nazwisko, COUNT(zadania.osoba_id) AS "Liczba zadań"
+FROM osoby
+JOIN zadania ON osoby.id_osoba = zadania.osoba_id
+GROUP BY osoby.nazwisko
+
+ALTER TABLE osoby
+DROP COLUMN osoby.telefon
