@@ -1,0 +1,66 @@
+* {
+    font-family: Helvetica;
+}
+
+header, footer {
+    background-color: sienna;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+}
+
+aside {
+    background-color: navajowhite;
+    width: 15%;
+    height: 700px;
+}
+
+article {
+    width: 70%;
+    height: 700px;
+    overflow: scroll;
+    position: relative;
+}
+
+.zdjecie {
+    float: left;
+    width: 46%;
+    margin: 2%;
+    position: absolute;
+}
+
+h3, p, a {
+    opacity: 0;
+    position: absolute;
+}
+
+h3 {
+    margin-top: 5%;
+}
+
+p {
+    margin-top: 30%;
+}
+
+a {
+    margin-top: 70%;
+    margin-left: 70%;
+    background-color: sienna;
+    padding: 15px;
+}
+
+.zdjecie:hover {
+    img {
+        opacity: 0.3;
+        transition: 0.5 ease;
+    }
+
+    h3, p, a {
+        opacity: 1;
+    }
+
+}
