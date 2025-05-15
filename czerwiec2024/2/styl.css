@@ -1,0 +1,85 @@
+* {
+  font-family: Garamond;
+}
+
+main {
+  display: flex;
+}
+
+section {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  background-color: coral;
+  width: 20%;
+  height: 680px;
+}
+
+header {
+  background-color: tomato;
+  color: white;
+  text-align: center;
+}
+
+footer {
+  background-color: tomato;
+  color: white;
+  text-align: center;
+
+  h5 {
+    margin: 0;
+  }
+}
+
+img {
+  border-radius: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.chat {
+  border: 1px solid tomato;
+  margin: 15px;
+  height: 470px;
+  overflow: scroll;
+}
+
+.blok {
+  border-radius: 5px;
+  width: 90%;
+  height: 70px;
+  margin: 2%;
+  padding: 3px;
+}
+
+.blok:nth-of-type(odd) {
+  background: #eee;
+
+  img {
+    float: left;
+  }
+}
+
+.blok:nth-of-type(even) {
+  background-color: #ccc;
+
+  img {
+    float: right;
+  }
+
+  text-align: right;
+}
+
+button {
+  background-color: tomato;
+  border: 1px solid darkred;
+  padding: 5px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 500px;
+}
