@@ -1,0 +1,13 @@
+SELECT wycieczki.nazwa
+FROM wycieczki
+WHERE wycieczki.poczatek = "Muszyna" OR wycieczki.poczatek = "Wieliczka"
+
+SELECT wycieczki.nazwa, wycieczki.opis, wycieczki.poczatek, zdjecia.zrodlo
+FROM wycieczki
+JOIN zdjecia ON wycieczki.zdjecia_id = zdjecia.id
+
+SELECT COUNT(wycieczki.id)
+FROM wycieczki
+
+ALTER TABLE wycieczki
+ADD COLUMN ocena int
