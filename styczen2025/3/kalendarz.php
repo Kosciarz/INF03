@@ -1,5 +1,42 @@
 <?php 
 
+$conn = mysqli_connect('localhost', 'root', '', 'kalendarz');
+if (!$conn) {
+    exit("Nie udało połączyć się z bazą danych: " . mysqli_connect_error());
+}
+
+$dni_tygodnia = [
+    1 => "poniedziałek",
+    2 => "wtorek",
+    3 => "środa",
+    4 => "czwartek",
+    5 => "piątek",
+    6 => "sobota",
+    7 => "niedziela",
+];
+
+$dzisiejsza_pelna_data = date("d-m-Y");
+$dzisiejsza_data = date("m-d", time());
+$dzien_tygodnia = $dni_tygodnia[date("w")];
+$query1 = "SELECT imieniny.imiona
+        FROM imieniny
+        WHERE imieniny.data = '$dzisiejsza_data'";
+
+$dzisiejsze_imieniny = mysqli_fetch_row(mysqli_query($conn, $query1));
+
+if ($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_POST['data'])) {
+    $dzien = substr($_POST['data'], 8);
+    $miesiac = substr($_POST['data'], 5, 2);
+    $wybrana_data = $miesiac . "-" . $dzien;
+
+    var_dump($wybrana_data);
+    $query2 = "SELECT imieniny.imiona
+            FROM imieniny
+            WHERE imieniny.data = '$wybrana_data'";
+    $wybrane_imieniny = mysqli_fetch_row(mysqli_query($conn, $query2));
+}
+
+mysqli_close($conn);
 
 ?>
 
@@ -19,9 +56,7 @@
     </header>
 
     <section>
-        <p>
-            <?php  ?>
-        </p>
+        <p>Dzisiaj jest <?= $dzien_tygodnia ?>, <?= $dzisiejsza_pelna_data ?>, imieniny: <?= implode($dzisiejsze_imieniny) ?></p>
     </section>
 
     <main>
@@ -80,6 +115,8 @@
                 <input type="date" name="data" id="data" min="2024-01-01" max="2024-12-31" required>
                 <input type="submit" value="wyślij">
             </form>
+
+            Dnia <?= $_POST['data'] ?> są imieniny: <?= implode($wybrane_imieniny) ?>
         </article>
 
         <aside id="prawy">
