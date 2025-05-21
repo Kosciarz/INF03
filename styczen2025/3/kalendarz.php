@@ -29,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_POST['data'])) {
     $miesiac = substr($_POST['data'], 5, 2);
     $wybrana_data = $miesiac . "-" . $dzien;
 
-    var_dump($wybrana_data);
     $query2 = "SELECT imieniny.imiona
             FROM imieniny
             WHERE imieniny.data = '$wybrana_data'";
