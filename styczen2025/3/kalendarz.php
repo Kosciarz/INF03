@@ -25,7 +25,7 @@
     </section>
 
     <main>
-        <article>
+        <aside id="lewy">
             <table>
                 <tr>
                     <th>liczba dni</th>
@@ -71,7 +71,7 @@
                     <td>luty</td>
                 </tr>
             </table>
-        </article>
+        </aside>
 
         <article>
             <h2>Sprawdź kto ma urodziny</h2>
@@ -82,7 +82,7 @@
             </form>
         </article>
 
-        <article>
+        <aside id="prawy">
             <a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów">
                 <img src="kalendarz.gif" alt="Kalendarz Majów">
             </a>
@@ -104,7 +104,7 @@
                     </ul>
                 </li>
             </ol>
-        </article>
+        </aside id="prawy">
     </main>
 
     <footer>
