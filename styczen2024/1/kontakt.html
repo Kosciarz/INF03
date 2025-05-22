@@ -30,46 +30,48 @@
 
         <section id="blok-glowny">
             <h2>Kontakt</h2>
-            <table>
-                <tr>
-                    <td>Imię:</td>
-                    <td>
-                        <input type="text" name="imie" id="imie">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Nazwisko:</td>
-                    <td>
-                        <input type="text" name="nazwisko" id="nazwisko">
-                    </td>
-                </tr>
-                <tr>
-                    <td>E-mail:</td>
-                    <td>
-                        <input type="email" name="email" id="email">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Zgłoszenie:</td>
-                    <td>
-                        <textarea name="zgloszenie" id="zgloszenie" cols="40" rows="10"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <input type="checkbox" name="regulamin" id="regulamin">
-                        <label for="regulamin">Zapoznałam/em się z regulaminem</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <button id="reset">Resetuj</button>
-                        <button id="submit">Prześlij</button>
-                    </td>
-                </tr>
-            </table>
+            <form action="#">
+                <table>
+                    <tr>
+                        <td>Imię:</td>
+                        <td>
+                            <input type="text" name="imie" id="imie">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nazwisko:</td>
+                        <td>
+                            <input type="text" name="nazwisko" id="nazwisko">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>E-mail:</td>
+                        <td>
+                            <input type="email" name="email" id="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Zgłoszenie:</td>
+                        <td>
+                            <textarea name="zgloszenie" id="zgloszenie" cols="40" rows="10"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="regulamin" id="regulamin">
+                            <label for="regulamin">Zapoznałam/em się z regulaminem</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="reset" class="przycisk" id="reset" value="Resetuj">
+                            <input type="submit" class="przycisk" id="submit" value="Prześlij">
+                        </td>
+                    </tr>
+                </table>
+            </form>
             <hr>
         </section>
 
@@ -77,6 +79,8 @@
             <p>Autor strony: <strong>12345678910</strong></p>
         </footer>
     </main>
+
+    <script src="skrypt.js"></script>
 
 </body>
 
