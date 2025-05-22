@@ -11,7 +11,11 @@ ORDER BY autorzy.nazwisko
 
 SELECT autorzy.imie, COUNT(zdjecia.autorzy_id)
 FROM autorzy
+<<<<<<< HEAD
 JOIN zdjecia ON zdjecia.autorzy_id = autorzy.id
+=======
+JOIN zdjecia ON autorzy.id = zdjecia.autorzy_id
+>>>>>>> 263682913d2a66c70b906cfbe7d20bc411b429b1
 GROUP BY autorzy.imie
 
 

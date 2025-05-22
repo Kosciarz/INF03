@@ -1,0 +1,17 @@
+SELECT imieniny.data
+FROM imieniny
+WHERE imieniny.imiona LIKE "%Karola"
+
+
+SELECT imieniny.imiona
+FROM imieniny
+WHERE imieniny.data = "04-05"
+
+
+SELECT COUNT(imieniny.data)
+FROM imieniny
+WHERE imieniny.imiona LIKE "%mir%"
+
+
+ALTER TABLE imieniny
+ADD COLUMN zyczenia VARCHAR(500)
