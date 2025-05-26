@@ -10,7 +10,7 @@
 <body>
     
     <div>
-        <section id="blok-boczny">
+        <aside id="blok-boczny">
             <img src="obraz.jpg" alt="promocje">
             <h2>Sprawdź promocje</h2>
             <table>
@@ -27,7 +27,7 @@
                     <td>20%</td>
                 </tr>
             </table>
-        </section>
+        </aside>
 
         <div id="blok-glowny">
             <header>
@@ -35,11 +35,11 @@
             </header>
 
             <main>
-                <button id="klient">Klient</button>
-                <button id="adres">Adres</button>
-                <button id="kontakt">Kontakt</button>
+                <button class="przycisk-zakladki" id="klient">Klient</button>
+                <button class="przycisk-zakladki" id="adres">Adres</button>
+                <button class="przycisk-zakladki" id="kontakt">Kontakt</button>
 
-                <div id="piewszy">
+                <div id="pierwszy" class="zakladka">
                     <p>Imię</p>
                     <input type="text" name="imie" id="imie" placeholder="Wpisz dane...">
 
@@ -50,7 +50,7 @@
                     <input type="date" name="data-urodzenia" id="data-urodzenia">
                 </div>
 
-                <div id="drugi">
+                <div id="drugi" class="zakladka">
                     <p>Ulica</p>
                     <input type="text" name="ulica" id="ulica">
 
@@ -61,19 +61,19 @@
                     <input type="text" name="miasto" id="miasto">
                 </div>
 
-                <div id="trzeci">
+                <div id="trzeci" class="zakladka">
                     <p>Numer komórkowy</p>
                     <input type="tel" name="" id="">
-
+                    <br>
                     <input type="checkbox" name="rodo" id="rodo">
                     <label for="rodo">Akceptuję RODO</label>
-
+                    <br>
                     <button id="zatwierdz">Zatwierdź dane</button>
                 </div>
             </main>
 
             <article id="pasek-postepu">
-                <section>
+                <section id="blok-paska-postepu">
 
                 </section>
             </article>
@@ -83,6 +83,8 @@
     <footer>
         <p>Rejestrację do sklepu wykonał: 00000000000</p>
     </footer>
+
+    <script src="skrypt.js"></script>
 
 </body>
 </html>
