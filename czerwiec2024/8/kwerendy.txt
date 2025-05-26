@@ -1,0 +1,17 @@
+SELECT osoby.imie, osoby.nazwisko
+FROM osoby
+WHERE osoby.dataUr LIKE "2%"
+
+
+SELECT DISTINCT adresy.miasto
+FROM adresy
+ORDER BY adresy.miasto ASC
+
+
+SELECT osoby.imie, osoby.nazwisko, telefony.numer
+FROM osoby
+JOIN telefony ON osoby.id = telefony.Osoby_id
+
+
+ALTER TABLE adresy
+ADD COLUMN numerMieszkania INT AFTER numer
