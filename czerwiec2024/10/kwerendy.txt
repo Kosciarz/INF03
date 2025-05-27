@@ -1,0 +1,19 @@
+SELECT COUNT(pracownicy.id), pracownicy.pensja
+FROM pracownicy
+GROUP BY pracownicy.pensja
+ORDER BY pracownicy.pensja DESC
+
+
+SELECT pracownicy.imie, pracownicy.nazwisko, stanowiska.nazwa
+FROM pracownicy
+JOIN stanowiska ON pracownicy.stanowiska_id = stanowiska.id
+WHERE pracownicy.staz > 10
+
+
+SELECT pracownicy.nazwisko, pracownicy.pensja
+FROM pracownicy
+WHERE pracownicy.staz BETWEEN 10 AND 20
+
+
+ALTER TABLE stanowiska
+ADD COLUMN minPensja INT
