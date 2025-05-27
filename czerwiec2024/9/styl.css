@@ -1,0 +1,70 @@
+* {
+    font-family: Georgia;
+    color: white;
+}
+
+header,
+footer {
+    background-color: maroon;
+    text-align: center;
+    padding: 2px;
+}
+
+main {
+    display: flex;
+}
+
+article {
+    background-color: lightsalmon;
+    height: 527px;
+}
+
+#lewy-blok,
+#prawy-blok {
+    width: 15%;
+}
+
+#srodkowy-blok {
+    width: 70%;
+}
+
+section {
+    background-color: maroon;
+    height: 70px;
+}
+
+button {
+    background-color: lightsalmon;
+    color: maroon;
+    border: none;
+    font-size: 400%;
+    display: block;
+    margin: auto;
+    padding-top: 210px;
+}
+
+section img {
+    height: 70px;
+    animation: slideIn 4s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        padding-left: 50px;
+    }
+    to {
+        prefix: 0px;
+    }
+}
+
+#srodkowy-blok img {
+    display: block;
+    margin: auto;
+    padding-top: 45px;
+    transition: transform 5s ease;
+    transform: scale(1);
+}
+
+#srodkowy-blok img:hover {
+    transform: scale(1.2);
+}
