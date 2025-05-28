@@ -1,3 +1,39 @@
+<?php
+
+$conn = mysqli_connect('localhost', 'root', '', 'psy');
+
+$wynik = "";
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (empty($_POST['login']) || empty($_POST['haslo']) || empty($_POST['powtorz-haslo'])) {
+        $wynik = 'wypełnij wszystkie pola';
+    } else {
+        $login = $_POST['login'];
+        $zapytanie1 = "SELECT uzytkownicy.login
+                    FROM uzytkownicy
+                    WHERE uzytkownicy.login = '$login'";
+
+        if (!empty(mysqli_fetch_row(mysqli_query($conn, $zapytanie1)))) {
+            $wynik = 'login występuje w bazie danych, konto nie zostało dodane';
+        } else {
+            if ($_POST['haslo'] !== $_POST['powtorz-haslo']) {
+                $wynik = 'hasła nie są takie same, konto nie zostało dodane';
+            } else {
+                $zaszyfrowanie_haslo = sha1($_POST['haslo']);
+                $zapytanie2 = "INSERT INTO uzytkownicy (uzytkownicy.login, uzytkownicy.haslo)
+                            VALUES ('$login', '$zaszyfrowanie_haslo')";
+                
+                mysqli_query($conn, $zapytanie2);
+                $wynik = 'Konto zostało dodane';
+            }
+        }
+    }
+}
+
+mysqli_close($conn);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -21,7 +57,7 @@
         <section>
             <article>
                 <h2>Zapisz się</h2>
-                <form action="#" method="POST">
+                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
                     <div>
                         <label for="login">login: </label>
                         <input type="text" name="login" id="login">
@@ -39,6 +75,9 @@
 
                     <input type="submit" value="Zapisz">
                 </form>
+                <p id="wynik">
+                    <?= $wynik ?>
+                </p>
             </article>
 
             <article>
