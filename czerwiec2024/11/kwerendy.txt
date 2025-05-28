@@ -3,7 +3,7 @@ FROM swinki
 WHERE swinki.data_ur LIKE '%07%'
 
 
-SELECT swinki.data_ur, swinki.miot, rasy.rasa
+SELECT DISTINCT swinki.data_ur, swinki.miot, rasy.rasa
 FROM swinki
 JOIN rasy ON swinki.rasy_id = rasy.id
 WHERE rasy.id = 1
