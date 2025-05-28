@@ -1,0 +1,52 @@
+* {
+    font-family: 'Garamond';
+}
+
+header {
+    background-color: saddlebrown;
+    color: white;
+    text-align: center;
+    height: 50px;
+}
+
+main {
+    display: flex;
+}
+
+section:first-of-type {
+    background-color: tan;
+    height: 500px;
+    width: 40%;
+}
+
+section:last-of-type {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+article {
+    background-color: tan;
+    height: 250px;
+    width: 100%;
+}
+
+footer {
+    background-color: saddlebrown;
+    color: white;
+}
+
+form {
+    background-color: saddlebrown;
+    color: white;
+    padding: 10px 30px;
+    width: 300px;
+}
+
+input {
+    margin: 5px;
+}
+
+p:before {
+    content: "STATUS: ";
+}

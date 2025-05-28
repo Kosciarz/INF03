@@ -22,14 +22,20 @@
             <article>
                 <h2>Zapisz się</h2>
                 <form action="#" method="POST">
-                    <label for="login">login: </label>
-                    <input type="text" name="login" id="login">
+                    <div>
+                        <label for="login">login: </label>
+                        <input type="text" name="login" id="login">
+                    </div>
 
-                    <label for="haslo">hasło: </label>
-                    <input type="password" name="haslo" id="haslo">
+                    <div>
+                        <label for="haslo">hasło: </label>
+                        <input type="password" name="haslo" id="haslo">
+                    </div>
 
-                    <label for="powtorz-haslo">powtórz hasło: </label>
-                    <input type="password" name="powtorz-haslo" id="powtorz-haslo">
+                    <div>
+                        <label for="powtorz-haslo">powtórz hasło: </label>
+                        <input type="password" name="powtorz-haslo" id="powtorz-haslo">
+                    </div>
 
                     <input type="submit" value="Zapisz">
                 </form>
