@@ -1,0 +1,19 @@
+SELECT swinki.imie, swinki.miot
+FROM swinki
+WHERE swinki.data_ur LIKE '%07%'
+
+
+SELECT swinki.data_ur, swinki.miot, rasy.rasa
+FROM swinki
+JOIN rasy ON swinki.rasy_id = rasy.id
+WHERE rasy.id = 1
+
+
+SELECT swinki.imie, swinki.cena, swinki.opis
+FROM swinki
+JOIN rasy ON swinki.rasy_id = rasy.id
+WHERE rasy.id = 1
+
+
+SELECT rasy.rasa
+FROM rasy
