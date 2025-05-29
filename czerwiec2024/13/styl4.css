@@ -47,13 +47,6 @@ input {
     margin: 5px;
 }
 
-p {
-    color: white;
-    min-height: 1em;
-}
-
-/* #wynik::before {
+#wynik::before {
     content: "STATUS: ";
-    color: pink;
-    min-width: 1em;
-} */
+}
