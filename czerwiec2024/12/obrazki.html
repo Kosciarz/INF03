@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Efekty na obrazach</h1>
+    </header>
+
+    <main>
+        <article>
+            <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku" id="obraz-pszczola">
+
+            <div>
+                <input type="radio" name="pszczola-filtr" id="blur" class="filtr">
+                <label for="blur">Blur</label>
+            </div>
+
+            <div>
+                <input type="radio" name="pszczola-filtr" id="sepia" class="filtr">
+                <label for="sepia">Sepia</label>
+            </div>
+
+            <div>
+                <input type="radio" name="pszczola-filtr" id="negatyw" class="filtr">
+                <label for="negatyw">Negatyw</label>
+            </div>
+
+            <div>
+                <button id="zastosuj-filtr">Zastosuj</button>
+            </div>
+        </article>
+    
+        <article>
+            <img src="pomarancza.jpg" alt="drzewo pomarańczy" id="obraz-pomarancz">
+
+            <div>
+                <button id="kolorowy">Kolorowy</button>
+                <button id="czarno-bialy">Czarno-biały</button>
+            </div>
+        </article>
+    
+        <article>
+            <img src="owoce.jpg" alt="Kosz pełen owoców" id="obraz-owoce">
+
+            <div>
+                <input type="range" name="suwak1" id="suwak1" min="0" max="100">
+            </div>
+
+            <div>
+                <button id="zastosuj-suwak1">Zastosuj</button>
+            </div>
+        </article>
+    
+        <article>
+            <img src="zolw.jpg" alt="Żółw w wodzie" id="obraz-zolw">
+
+            <div>
+                <input type="range" name="suwak2" id="suwak2" min="0" max="250">
+            </div>
+
+            <div>
+                <button id="zastosuj-suwak2">Zastosuj</button>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p><a href="http://www.css.com/">Zobacz inne efekty obrazu</a></p>
+        <p>Stronę wykonał: 00000000000</p>
+    </footer>
+
+    <script src="skrypt.js"></script>
+
+</body>
+
+</html>
