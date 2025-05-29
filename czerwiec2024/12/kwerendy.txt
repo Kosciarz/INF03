@@ -1,0 +1,18 @@
+SELECT pracownicy.imie, pracownicy.staz
+FROM pracownicy
+WHERE pracownicy.staz < 5
+
+
+SELECT AVG(pracownicy.pensja), stanowiska.nazwa
+FROM pracownicy
+JOIN stanowiska ON stanowiska.id = pracownicy.stanowiska_id
+GROUP BY pracownicy.stanowiska_id
+
+
+SELECT pracownicy.imie, pracownicy.nazwisko, pracownicy.pensja
+FROM pracownicy
+WHERE pracownicy.pensja = (SELECT MAX(pracownicy.pensja) FROM pracownicy)
+
+
+UPDATE pracownicy 
+SET pracownicy.staz = pracownicy.staz + 1
